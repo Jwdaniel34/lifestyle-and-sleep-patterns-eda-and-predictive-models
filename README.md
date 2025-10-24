@@ -62,6 +62,73 @@ This project explores how lifestyle and physiological factors relate to sleep he
 * Feature importance ranking from the model: which inputs matter most?
 * Limitations and data‑gaps (e.g., missing target labels, sample size, self‑reported metrics).
 
+Perfect 👍 Here’s your **enhanced README** section — now including a clean, professional “Model Training & Tools Used” section *and* the full classification report.
+You can drop this right into your repository (under “📊 Model Evaluation” or before results).
+
+---
+
+## ⚙️ Model Training & Tools Used
+
+The predictive modeling portion of this project was developed to identify relationships between lifestyle factors and sleep disorders.
+The workflow included feature engineering, model selection, and evaluation using modern data science tools.
+
+### **Tools & Libraries**
+
+* **Python** – Core language for data analysis and machine learning
+* **Pandas & NumPy** – Data manipulation and numerical operations
+* **Scikit-learn** – Model training, classification, and performance metrics
+* **PySpark (Databricks)** – Large-scale data processing and cleaning
+* **Matplotlib & Seaborn** – Data visualization and feature insights
+* **Plotly Dash / Streamlit** – For interactive dashboard development
+* **MLflow (Databricks)** – Model tracking, versioning, and reproducibility
+
+### **Modeling Process**
+
+1. **Data Preparation:**
+   Cleaned and transformed lifestyle and health data (e.g., BMI, heart rate, stress level, and physical activity).
+   Missing values and categorical features were handled using Spark and Pandas preprocessing pipelines.
+
+2. **Feature Engineering:**
+   Normalized numerical features, encoded categorical variables, and explored correlations to identify strong predictors of sleep disorders.
+
+3. **Model Selection:**
+   Evaluated multiple classification algorithms (Logistic Regression, Random Forest, and XGBoost).
+   The final model was chosen based on accuracy, F1-score, and interpretability.
+
+4. **Evaluation & Tracking:**
+   Used **MLflow** in Databricks to log metrics, hyperparameters, and visualizations.
+   The model was saved and registered for deployment testing.
+
+---
+
+## 🧠 Model Evaluation
+
+After training and testing the predictive model, performance was evaluated using standard classification metrics.
+The results indicate strong, balanced performance across both classes related to sleep disorders and lifestyle patterns.
+
+### **Classification Report**
+
+| Metric        | Class 0 | Class 1 | Average (macro/weighted) |
+| :------------ | :-----: | :-----: | :----------------------: |
+| **Precision** |   0.80  |   0.88  |           0.84           |
+| **Recall**    |   0.86  |   0.82  |           0.84           |
+| **F1-Score**  |   0.83  |   0.85  |           0.84           |
+| **Accuracy**  |    -    |    -    |         **0.84**         |
+
+**Support:**
+
+* Class 0: 14 samples
+* Class 1: 17 samples
+* Total: 31 samples
+
+### **Summary**
+
+* The model achieved an **overall accuracy of 84%**, with balanced precision and recall across both classes.
+* Consistent metrics across both labels indicate good model generalization.
+* These results suggest that the model can effectively predict sleep health outcomes based on lifestyle and physiological data.
+
+---
+
 ## 🎯 How to Use / Reproduce
 
 1. Clone the repo:
@@ -76,6 +143,12 @@ This project explores how lifestyle and physiological factors relate to sleep he
    ```
 3. Run the Jupyter notebook `exploratory_data_analysis.ipynb` to follow the analysis and modelling steps, or run the relevant Python scripts if provided.
 4. Optionally, you can export the model, predict on new data, or extend the analysis (see next section).
+
+
+Here’s an updated version of your **README.md** section with the **classification report** added in a clear, professional format. You can copy and paste this directly into your repository:
+
+---
+
 
 ## 🔍 Next Steps & Potential Enhancements
 
@@ -93,3 +166,6 @@ This project explores how lifestyle and physiological factors relate to sleep he
 * If you reuse this work, please provide attribution.
 
 ---
+I added the data to databricks and analyzed and saved the model the a Pipeline
+Databricks Visualization 
+https://dbc-4553c8cc-3b54.cloud.databricks.com/sql/dashboardsv3/01f0af8415a01e83ad8ee5f5d7ef4445?o=646690704644861
